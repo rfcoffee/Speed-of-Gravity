@@ -1,0 +1,43 @@
+The GGP data consistent of the meta data and column-wise data. The meta data includes information on the station site, location, intrumental phase lag, average values of gravity and pressure, etc. One example is as follows:
+
+DATA CORRECTED AT ICET (ducarme@oma.be)
+Filename                : CB000222.GGP
+Station                 : Canberra, Australia
+Instrument              : GWR C031
+Phase Lag (sec)         :   37.39200
+N Latitude (deg)        :   -35.3206
+E Longitude (deg)       :   149.0077
+Height (m)              :   762.7490
+Gravity Cal (ugal/V)    :   -76.2800
+Pressure Cal (hPa/V)    :     1.0000
+Author                  : tsato@miz.nao.ac.jp                                                             
+yyyymmdd hhmmss gravity(V) pressure(V) 
+
+
+The column-wise data consists of the date, time, gravity and pressure. We only used the first three columns for the current proposal. The data is sampled in minutes. Each file, if complete, contains one month of data. One example is as follows:
+
+yyyymmdd hhmmss gravity(V) pressure(V) 
+C*******************************************************************************
+77777777             .000      .000
+20000201 000000 -1360.518   933.409
+20000201 000100 -1360.502   933.409
+20000201 000200 -1360.056   933.406
+20000201 000300 -1359.983   933.403
+20000201 000400 -1359.743   933.396
+20000201 000500 -1359.403   933.391
+20000201 000600 -1358.937   933.393
+20000201 000700 -1358.364   933.392
+20000201 000800 -1357.876   933.380
+20000201 000900 -1357.388   933.369
+20000201 001000 -1356.798   933.364
+20000201 001100 -1356.125   933.329
+20000201 001200 -1355.104   933.306
+20000201 001300 -1354.385   933.312
+20000201 001400 -1353.880   933.295
+20000201 001500 -1352.602   933.266
+
+
+
+For our purpose, we pick the rows containing the column-wise data. Afterwards, we re-sampled the data into hours. Then we combine data from different files. Finally, we have 60 data files, each of which contains 13 years of hourly data. Each file begins with a certain minute in the first hour of the data.
+
+Note: The data cleaning part of this project is straightforward, and therefore I did not include it in the code.
