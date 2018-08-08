@@ -4,6 +4,6 @@ The principle behind this work is very simple. If the speed of gravity is less t
 
 Fortunately, we now have the opportunity to measure this effect. The Global Geodynamics Project (GGP) has been measuring the tidal acceleration at over 30 stations around the globe for 20 years until now. The gravimeters have a precision at the scale of nm/s^2.
 
-Until now, I have built a linear regression model to compute the gravitational phase of the principal solar tide, the S2 constituent. 154 dominant tidal constituents are built into the model and 13 years of data from Wuhan station are used. The normal equation method works very well. It successfully passes the test from predicted data, converges with the data length, and the statistical variance is only 0.5 second. My best result so far gives an aberration time of about 4 second.
+The method I used is linear regression. The algorithm is written in Matlab. The data files are named after each minute in an hour, i.e. 1.txt, 2.txt, ..., 60.txt. My best result so far gives an aberration time of about 4 second, with a statistical variation of 0.5 second.
 
 Please contact if interested in the data set.
